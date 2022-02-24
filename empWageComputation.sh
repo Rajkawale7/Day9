@@ -18,7 +18,7 @@ fi
 
 WorkingHour=$(( RANDOM%3 ))
 
-#using switch case
+#By using switch case
 
 case $WorkingHour in
 
@@ -35,8 +35,16 @@ case $WorkingHour in
      ;;
 
 esac
+
 #Calculate Daily Employee Wage
 
 emp_rate_per_hr=20
 daily_emp_wage=$(($empAttendance * $work_hrs * $emp_rate_per_hr))
 echo "Daily Employee Wage" $daily_emp_wage
+
+
+#Calculating Wages for a Month
+
+work_day=20
+monthlyEmpWage=$(($daily_emp_wage * $work_day))
+echo "Monthly Employee Wage" $monthlyEmpWage
